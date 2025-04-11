@@ -1,3 +1,10 @@
+#=
+Copied and pasted from the repo:
+
+https://github.com/fredrikekre/Runic.jl/blob/master/juliac/runicc.jl
+
+=#
+
 module RunicC
 
 
