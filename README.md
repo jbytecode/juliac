@@ -25,10 +25,42 @@ in the OS terminal.
 ### Hello World
 
 ```shell
-make hello
+> make hello
 ```
 
 generates the `hello` binary using `hello.jl`. 
+
+Please review the `Makefile` file to build other examples.
+
+### Calling Julia Library Function from C 
+
+The files `mylib.c`, `mylibcaller.c`, and `mylib.jl` represents calling Julia-generated dynamic library functions from within C. Here is the skeleton:
+
+```julia
+module MyLibrary
+
+   Base.@ccallable function myfunc(x::Float64)::Float64
+	   return x^2
+   end 
+
+end 
+```
+
+and here the caller:
+
+```C
+#include<stdio.h>
+
+double myfunc(double);
+
+int main(){
+	double result = myfunc(5.0);
+	printf("Result is %f\n", result);
+	return 0;
+}
+```
+
+where `myfunc` is defined in Julia.
 
 ### Note
 
