@@ -1,6 +1,6 @@
 # juliac
 
-Examples for Julia's generating small binary executables and libraries feauture.
+Examples for Julia's generating small binary executables and libraries feature.
 
 Note that this feature is still under development.
 
@@ -8,11 +8,15 @@ Note that this feature is still under development.
 
 https://jbytecode.github.io/juliac/
 
+This blog post represents the requirements and command line arguments of the compiler.
+
 ## The Discourse Entry
 
 https://discourse.julialang.org/t/where-is-juliac-developed/113004?u=jbytecode
 
-### How to use this repo?
+This Discourse post the entry point of my journey.
+
+## How to use this repo?
 
 - The `download.sh` script downloads the required scripts from the Julia's GitHub repository. The latest versions of these scripts are already included in this repo. To update them, type
 
@@ -70,4 +74,4 @@ compiles Julia and C files together and generates the shared library and the cal
 
 ### Note
 
-I found the source code of `args2.jl` in a GitHub repo but I don't remember the link of this repo. Thank you for the author of this file, indeed, it's very helpful on how to get command line arguments using Julia's low level memory operations.
+I found the source code of `args2.jl` in a GitHub repo but I don't remember the link. Thank you for the author of this file, indeed, it's very helpful on how to get command line arguments using Julia's low level memory operations.
