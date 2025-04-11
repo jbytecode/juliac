@@ -60,7 +60,13 @@ int main(){
 }
 ```
 
-where `myfunc` is defined in Julia.
+where `myfunc` is defined in Julia. 
+
+```Shell
+> make mylibcaller
+```
+
+compiles Julia and C files together and generates the shared library and the caller executable.
 
 ### Note
 
