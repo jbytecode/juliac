@@ -8,7 +8,7 @@ https://github.com/fredrikekre/Runic.jl/blob/master/juliac/runicc.jl
 module RunicC
 
 
-# Compileable main function corresponding to `int main(int argc, char** argv)`
+# Compilable main function corresponding to `int main(int argc, char** argv)`
 Base.@ccallable function main(argc::Cint, argv::Ptr{Ptr{UInt8}})::Cint
     # Load command line arguments. Note that the first argument is the
     # executable name so we skip it.
