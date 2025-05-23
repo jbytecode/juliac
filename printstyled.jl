@@ -1,9 +1,7 @@
-module MyLogApp
 
 
-Base.@ccallable function main()::Cint
+function (@main)(args::Vector{String})::Cint
 	printstyled(Core.stdout, "Hello, World!"; bold = true, color = :red)
 	return 0
 end
 
-end # End of module MyLogApp
