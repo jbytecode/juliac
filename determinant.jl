@@ -1,15 +1,12 @@
-module Determinant
-
 using LinearAlgebra
 
-Base.@ccallable function main()::Cint
-	m = random(10, 10)
+function (@main)(args::Vector{String})::Cint
+	m = rand(Float64, 10, 10)
     result = det(m)
     println(Core.stdout, "Determinant of matrix m is: ", result)
     return 0
 end 
 
-end # end of module Determinant
 
 
 # To compile the code:
