@@ -1,5 +1,3 @@
-module EstimatetionOfPi
-
 function estimatepi(samples::UInt64)::Float64
     n = UInt64(0)
     for i = 1:samples
@@ -12,7 +10,7 @@ function estimatepi(samples::UInt64)::Float64
     return 4.0 * Float64(n) / Float64(samples)
 end
 
-Base.@ccallable function main()::Cint
+function (@main)(args::Vector{String})::Cint
     samples = UInt64(10^7)
     result1 = estimatepi(samples)
     println(Core.stdout, "1. Estimate of pi is $result1 with $samples samples")
@@ -26,4 +24,3 @@ Base.@ccallable function main()::Cint
 end
 
 
-end # End of module EstimatetionOfPi
