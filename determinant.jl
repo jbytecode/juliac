@@ -1,7 +1,7 @@
 using LinearAlgebra
 
 function (@main)(args::Vector{String})::Cint
-	m = rand(Float64, 10, 10)
+    m = rand(Float64, 10, 10)
     result = det(m)
     println(Core.stdout, "Determinant of matrix m is: ", result)
     return 0
