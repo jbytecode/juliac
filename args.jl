@@ -1,15 +1,13 @@
-module MyApp
 
 
-Base.@ccallable function main()::Cint
-	#ARGS = String[unsafe_string(unsafe_load(argv, i)) for i in 1:argc]
-	L = length(ARGS)
-	println(Core.stdout, "Length of args is $L")
-	println(Core.stdout, "Here is the list of command line arguments: ")
-	for i in 1:L
-		println(Core.stdout, ARGS[i])
-	end 
+function (@main)(args::Vector{String})::Cint
+	if length(args) == 0
+		println(Core.stdout, "No command line arguments provided.")
+	else
+		println(Core.stdout, "Command line arguments provided:")
+		for arg in args
+			println(Core.stdout, arg)
+		end
+	end
 	return 0
 end
-
-end # End of module MyApp
