@@ -38,10 +38,10 @@ integrate: integrate.jl
 	julia +nightly juliac.jl --experimental --output-exe integrate --trim integrate.jl
 
 integrate-mapped: integrate-mapped.jl
-	julia +nightly juliac.jl --experimental --output-exe integrate-mapped --trim --verbose integrate-mapped.jl
+	julia +nightly juliac.jl --experimental --output-exe integrate-mapped --trim integrate-mapped.jl
 
 determinant: determinant.jl 
-	julia +nightly juliac.jl --experimental --output-exe determinant --trim --verbose determinant.jl
+	julia +nightly juliac.jl --experimental --output-exe determinant --trim determinant.jl
 
 libmylib.so: mylib.jl
 	julia +nightly juliac.jl --experimental --output-lib libmylib --trim --compile-ccallable mylib.jl
