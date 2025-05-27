@@ -25,4 +25,5 @@ Manifest.toml
 
 # Binaries
 hello
-
+determinant
+integrate
