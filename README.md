@@ -21,7 +21,9 @@ This Discourse post the entry point of my journey.
 - The `download.sh` script downloads the required scripts from the Julia's GitHub repository. The latest versions of these scripts are already included in this repo. To update them, type
 
 ```shell
+> cd juliac
 > ./download.sh
+> cd ..
 ```
 
 in the OS terminal.
