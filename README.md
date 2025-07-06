@@ -74,12 +74,5 @@ where `myfunc` is defined in Julia.
 
 compiles Julia and C files together and generates the shared library and the caller executable.
 
-### Note
 
-I found the source code of `args2.jl` in a GitHub repo but I don't remember the link. Thank you for the author of this file, indeed, it's very helpful on how to get command line arguments using Julia's low level memory operations. 
 
-#### Edit
-
-Just found the source of `args2.jl`:
-
-https://github.com/fredrikekre/Runic.jl/blob/master/juliac/runicc.jl
