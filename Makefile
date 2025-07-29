@@ -42,7 +42,7 @@ integrate-mapped: integrate-mapped.jl
 	$(JULIA) $(JULIAC_SCRIPT) $(FLAGS) --output-exe integrate-mapped integrate-mapped.jl
 
 determinant: determinant.jl
-	$(JULIA) $(JULIAC_SCRIPT) $(FLAGS)  --output-exe determinant determinant.jl
+	$(JULIA) $(JULIAC_SCRIPT) $(FLAGS) --output-exe determinant determinant.jl
 
 libmylib.so: mylib.jl
 	$(JULIA) $(JULIAC_SCRIPT) $(FLAGS) --output-lib libmylib --compile-ccallable mylib.jl
