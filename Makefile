@@ -12,6 +12,7 @@ clean:
 	rm -f montecarlo
 	rm -f estimatepi
 	rm -f printstyled
+	rm -f abcd 
 
 JULIAC_SCRIPT=./juliac/juliac.jl
 JULIA=julia +nightly
@@ -19,6 +20,9 @@ FLAGS=--experimental --trim
 
 hello: hello.jl
 	$(JULIA) $(JULIAC_SCRIPT) $(FLAGS) --output-exe hello hello.jl
+
+abcd: abcd.jl 
+	$(JULIA) $(JULIAC_SCRIPT) $(FLAGS) --output-exe abcd abcd.jl
 
 integrate: integrate.jl
 	$(JULIA) $(JULIAC_SCRIPT) $(FLAGS) --output-exe integrate integrate.jl
